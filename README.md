@@ -39,7 +39,9 @@ You can filter an image using the following endpoint
 
 For e.g. you can try to give the below image URL and see the results
 
+```
 /filteredimage?image_url=https://cdn.pixabay.com/photo/2022/04/29/17/48/lofoten-7164179_960_720.jpg
+```
 
 The app should return the filtered image if all goes well, else you will recieve an error
 
