@@ -10,39 +10,42 @@ A basic Ionic client web application which consumes the RestAPI Backend. [Covere
 
 ## Tasks
 
-### Setup Node Environment
+### Setup Locally
 
-You'll need to create a new node server. Open a new terminal within the project directory and run:
+You can setup the app locally following the below steps.
+
+Fork or Clone the repo to your local machine.
+
+Open the folder in your machine and install the necessary dependencies as follows
+
 
 1. Initialize a new project: `npm i`
 2. run the development server with `npm run dev`
+3. The app should start on the localhost
 
-### Create a new endpoint in the server.ts file
+### A live version of this app is running on AWS
 
-The starter code has a task for you to complete an endpoint in `./src/server.ts` which uses query parameter to download an image from a public URL, filter the image, and return the result.
+Visit the URL below to check the app
 
-We've included a few helper functions to handle some of these concepts and we're importing it for you at the top of the `./src/server.ts`  file.
-
-```typescript
-import {filterImageFromURL, deleteLocalFiles} from './util/util';
+```
+http://udacity-udagram-shuchou-dev.us-east-2.elasticbeanstalk.com/
 ```
 
-### Deploying your system
+You can filter an image using the following endpoint
 
-Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
+```
+/filteredimage?image_url=<URL>
+```
 
-## Stand Out (Optional)
+For e.g. you can try to give the below image URL and see the results
 
-### Refactor the course RESTapi
+/filteredimage?image_url=https://cdn.pixabay.com/photo/2022/04/29/17/48/lofoten-7164179_960_720.jpg
 
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
+The app should return the filtered image if all goes well, else you will recieve an error
 
-### Authentication
 
-Prevent requests without valid authentication headers.
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
 
-### Custom Domain Name
 
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+
+
+
